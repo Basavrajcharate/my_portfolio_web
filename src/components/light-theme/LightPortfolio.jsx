@@ -140,15 +140,49 @@ export default function LightPortfolio() {
             </section>
 
             {/* Projects (Placeholder) */}
-            <section id="projects" className="py-20 bg-white border-t border-slate-100">
+            <section id="projects" className="py-20 bg-white border-t border-slate-200">
                 <div className="max-w-6xl mx-auto px-4 text-center">
-                    <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center">Projects</h2>
+                    <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center text-slate-800">Projects</h2>
                     <p className="text-slate-500">Detailed project showcases coming soon.</p>
                 </div>
             </section>
 
+            {/* Certifications Section */}
+            <section id="certifications" className="py-20 bg-slate-50 border-t border-slate-200">
+                <div className="max-w-6xl mx-auto px-4">
+                    <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-slate-800">Licenses & Certifications</h2>
+                    
+                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <a href="/Web Development Certificate.pdf" target="_blank" rel="noopener noreferrer" className="block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:border-blue-400 hover:shadow-md transition-all group">
+                            <h3 className="font-bold text-lg text-slate-800 group-hover:text-blue-600 transition-colors">Web Development</h3>
+                            <p className="text-slate-500 mt-2">Udemy</p>
+                        </a>
+                        
+                        <a href="/Accunture Certificate.pdf" target="_blank" rel="noopener noreferrer" className="block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:border-purple-400 hover:shadow-md transition-all group">
+                            <h3 className="font-bold text-lg text-slate-800 group-hover:text-purple-600 transition-colors">Acquiring Data (Level 1 - AI Fundamentals)</h3>
+                            <p className="text-slate-500 mt-2">Accenture</p>
+                        </a>
+
+                        <a href="/Coursera K8Y4O3QZD5NN--Final Certificate.pdf" target="_blank" rel="noopener noreferrer" className="block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:border-blue-500 hover:shadow-md transition-all group">
+                            <h3 className="font-bold text-lg text-slate-800 group-hover:text-blue-500 transition-colors">Microsoft Power BI Data Analyst</h3>
+                            <p className="text-slate-500 mt-2">Coursera</p>
+                        </a>
+
+                        <a href="/dsa.pdf" target="_blank" rel="noopener noreferrer" className="block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:border-orange-400 hover:shadow-md transition-all group">
+                            <h3 className="font-bold text-lg text-slate-800 group-hover:text-orange-600 transition-colors">Data Structure and Algorithms (DSA)</h3>
+                            <p className="text-slate-500 mt-2">Apna College</p>
+                        </a>
+
+                        <a href="/soft-skills.pdf" target="_blank" rel="noopener noreferrer" className="block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:border-emerald-400 hover:shadow-md transition-all group">
+                            <h3 className="font-bold text-lg text-slate-800 group-hover:text-emerald-600 transition-colors">Developing soft skills and personality</h3>
+                            <p className="text-slate-500 mt-2">NPTEL</p>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
             {/* Tech Stack */}
-            <section id="tech-stack" className="py-20 bg-slate-50">
+            <section id="tech-stack" className="py-20 bg-white border-t border-slate-200">
                 <div className="max-w-6xl mx-auto px-4">
                     <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">Technical Arsenal</h2>
 
