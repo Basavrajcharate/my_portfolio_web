@@ -12,28 +12,28 @@ export default function Overlay() {
                     transition={{ duration: 1.5, ease: 'easeOut', delay: 0.2 }}
                     className="relative flex flex-col md:flex-row items-center justify-center gap-6 md:gap-12 max-w-7xl mx-auto w-full mt-4 md:mt-0"
                 >
-                        {/* Subtle glowing halo behind everything */}
-                        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[150%] h-[150%] bg-blue-500/10 blur-[120px] rounded-full -z-10 pointer-events-none"></div>
+                    {/* Subtle glowing halo behind everything */}
+                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[150%] h-[150%] bg-blue-500/10 blur-[120px] rounded-full -z-10 pointer-events-none"></div>
 
-                        {/* Profile Card */}
-                        <div className="flex flex-col items-center justify-center p-6 md:p-8 bg-gradient-to-br from-[#0f172a]/95 to-[#020617]/95 backdrop-blur-2xl border-2 border-blue-500/40 rounded-3xl shadow-[0_0_40px_rgba(59,130,246,0.25)] hover:border-blue-400/80 transition-all duration-500 max-w-[90vw] md:min-w-[30vw]">
-                            <div className="relative w-36 h-36 md:w-48 md:h-48 mb-4 md:mb-6 rounded-full overflow-hidden border-4 border-blue-500/50 shadow-[0_0_20px_rgba(59,130,246,0.4)]">
-                                <img
-                                    src="/images/profile.jpg"
-                                    alt="Basavraj Charate"
-                                    className="w-full h-full object-cover"
-                                />
-                                <div className="absolute inset-0 bg-blue-500/10 mix-blend-overlay pointer-events-none"></div>
-                            </div>
-
-                            <div className="flex items-center gap-2 md:gap-3 bg-blue-950/60 px-4 py-2 md:px-5 md:py-2.5 rounded-full border border-blue-800/60 shadow-inner">
-                                <span className="relative flex h-3 w-3">
-                                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
-                                    <span className="relative inline-flex rounded-full h-3 w-3 bg-blue-500"></span>
-                                </span>
-                                <p className="text-blue-100 font-mono text-xs md:text-sm tracking-wide">Web & AIML Developer</p>
-                            </div>
+                    {/* Profile Card */}
+                    <div className="flex flex-col items-center justify-center p-6 md:p-8 bg-gradient-to-br from-[#0f172a]/95 to-[#020617]/95 backdrop-blur-2xl border-2 border-blue-500/40 rounded-3xl shadow-[0_0_40px_rgba(59,130,246,0.25)] hover:border-blue-400/80 transition-all duration-500 max-w-[90vw] md:min-w-[30vw]">
+                        <div className="relative w-36 h-36 md:w-48 md:h-48 mb-4 md:mb-6 rounded-full overflow-hidden border-4 border-blue-500/50 shadow-[0_0_20px_rgba(59,130,246,0.4)]">
+                            <img
+                                src="/images/profile.jpg"
+                                alt="Basavraj Charate"
+                                className="w-full h-full object-cover"
+                            />
+                            <div className="absolute inset-0 bg-blue-500/10 mix-blend-overlay pointer-events-none"></div>
                         </div>
+
+                        <div className="flex items-center gap-2 md:gap-3 bg-blue-950/60 px-4 py-2 md:px-5 md:py-2.5 rounded-full border border-blue-800/60 shadow-inner">
+                            <span className="relative flex h-3 w-3">
+                                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                                <span className="relative inline-flex rounded-full h-3 w-3 bg-blue-500"></span>
+                            </span>
+                            <p className="text-blue-100 font-mono text-xs md:text-sm tracking-wide">Web & AIML Developer</p>
+                        </div>
+                    </div>
 
                     {/* Primary Cinematic Text */}
                     <div className="text-center md:text-left flex flex-col justify-center">
@@ -181,6 +181,17 @@ export default function Overlay() {
                                     <li>Designed UI/UX and managed DB operations.</li>
                                 </ul>
                             </div>
+
+                            <div className="border-l-4 border-emerald-500/50 pl-6">
+                                <h4 className="font-bold text-emerald-50 text-xl flex flex-col md:flex-row md:justify-between items-start md:items-center">
+                                    <span>Rural Development Project</span>
+                                    <span className="text-base font-mono text-emerald-400 mt-2 md:mt-0 bg-emerald-950/50 px-3 py-1 rounded border border-emerald-700/50">June '24 - Sept '24</span>
+                                </h4>
+                                <p className="text-lg text-emerald-200/80 mt-2 mb-3 font-medium">Kallakarjal Village</p>
+                                <ul className="text-base text-gray-300 list-disc list-inside space-y-2">
+                                    <li>Advocating for Sustainable Agriculture & Community Awareness</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div >
@@ -189,7 +200,7 @@ export default function Overlay() {
             {/* Projects & Certifications Section - Page 3 */}
             <section className="h-screen w-full flex items-center justify-center px-4 md:px-20 relative pointer-events-auto">
                 <div className="flex flex-col md:flex-row gap-6 md:gap-8 w-full max-w-7xl items-stretch md:justify-center pt-24 md:pt-32 pb-24 md:pb-20 h-full overflow-y-auto pr-2 md:pr-4 custom-scrollbar pointer-events-auto mx-auto">
-                    
+
                     {/* Projects Column */}
                     <div className="w-full md:w-1/2 flex flex-col bg-gradient-to-br from-[#0f172a]/95 to-[#020617]/95 border-2 border-pink-500/40 p-6 md:p-10 rounded-2xl backdrop-blur-2xl shadow-[0_0_30px_rgba(236,72,153,0.2)] hover:border-pink-400/80 transition-all duration-300 md:max-h-[80vh]">
                         <div className="flex flex-col md:flex-row justify-between items-start mb-6 gap-4 shrink-0">
