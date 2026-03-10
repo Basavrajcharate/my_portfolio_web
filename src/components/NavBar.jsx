@@ -56,9 +56,10 @@ export default function NavBar() {
                             <button onClick={() => scrollTo(1, 'contact')} className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">Contact</button>
                         </div>
 
+                    <div className="flex md:hidden items-center">
                         <button
                             onClick={toggleTheme}
-                            className="ml-4 flex items-center justify-center p-2 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-500/30 hover:border-purple-400/50 transition-all duration-300 group"
+                            className="mr-2 flex items-center justify-center p-2 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-500/30 hover:border-purple-400/50 transition-all duration-300 group"
                             title={theme === '3d' ? "Switch to Simple Light Theme" : "Switch to 3D Space Theme"}
                         >
                             {theme === '3d' ? (
@@ -71,9 +72,7 @@ export default function NavBar() {
                                 </svg>
                             )}
                         </button>
-                    </div>
 
-                    <div className="-mr-2 flex md:hidden">
                         <button onClick={() => setIsOpen(!isOpen)} type="button" className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700/50 focus:outline-none">
                             <span className="sr-only">Open main menu</span>
                             {!isOpen ? (
@@ -88,6 +87,7 @@ export default function NavBar() {
                         </button>
                     </div>
                 </div>
+            </div>
             </div>
 
             {isOpen && (

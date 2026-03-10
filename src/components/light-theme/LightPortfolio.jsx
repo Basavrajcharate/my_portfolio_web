@@ -5,13 +5,13 @@ export default function LightPortfolio() {
         <div className="min-h-screen bg-gray-50 text-slate-800 font-sans overflow-x-hidden pt-16">
 
             {/* Hero Section */}
-            <section id="hero" className="min-h-[85vh] flex flex-col justify-center items-center px-4 max-w-6xl mx-auto">
-                <div className="flex flex-col md:flex-row items-center justify-between w-full gap-12">
-                    <div className="flex-1 space-y-6 text-center md:text-left">
-                        <div className="inline-block px-4 py-1.5 rounded-full bg-blue-100 text-blue-700 font-semibold text-sm tracking-wide mb-4">
+            <section id="hero" className="min-h-[85vh] flex flex-col justify-center items-center px-6 md:px-4 max-w-6xl mx-auto">
+                <div className="flex flex-col md:flex-row items-center justify-between w-full gap-12 mt-10 md:mt-0">
+                    <div className="flex-1 space-y-6 text-center md:text-left mt-8 md:mt-0">
+                        <div className="inline-block px-4 py-1.5 rounded-full bg-blue-100 text-blue-700 font-semibold text-sm tracking-wide mb-2 md:mb-4">
                             Welcome to my profile
                         </div>
-                        <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight text-slate-900">
+                        <h1 className="text-4xl sm:text-5xl md:text-7xl font-extrabold tracking-tight text-slate-900 leading-tight">
                             Hi, I'm <span className="text-blue-600">Basavraj</span> Charate
                         </h1>
                         <p className="text-xl text-slate-600 max-w-2xl mx-auto md:mx-0 leading-relaxed">
@@ -193,7 +193,7 @@ export default function LightPortfolio() {
             </section>
 
             {/* Fast Footer / Contact */}
-            <footer id="contact" className="bg-slate-900 text-slate-300 py-16">
+            <footer id="contact" className="bg-slate-900 text-slate-300 py-16 px-4 md:px-8">
                 <div className="max-w-6xl mx-auto px-4">
                     <div className="text-center mb-12">
                         <h2 className="text-3xl font-bold text-white mb-4">Let's Connect</h2>

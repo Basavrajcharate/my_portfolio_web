@@ -288,22 +288,22 @@ export default function Overlay() {
                             COMMS HUB
                         </h2>
                     </div>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-cyan-50 relative z-10 w-full">
-                        <div className="flex items-start gap-4 bg-cyan-950/30 p-5 rounded-xl border border-cyan-800/40 hover:bg-cyan-900/40 transition-colors">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-cyan-50 relative z-10 w-full mt-8">
+                        <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 bg-cyan-950/30 p-5 rounded-xl border border-cyan-800/40 hover:bg-cyan-900/40 transition-colors text-center sm:text-left">
                             <span className="text-3xl bg-cyan-900/50 p-3 rounded-xl mt-1">📧</span>
-                            <div className="overflow-hidden">
+                            <div className="overflow-hidden w-full">
                                 <p className="text-xs md:text-sm text-cyan-500 uppercase font-bold tracking-[0.2em] mb-2">Email</p>
-                                <p className="font-mono text-sm md:text-base break-words">basavraj.charate130904@<br />gmail.com</p>
+                                <p className="font-mono text-sm md:text-base break-words w-full">basavraj.charate130904@gmail.com</p>
                             </div>
                         </div>
-                        <div className="flex items-start gap-4 bg-cyan-950/30 p-5 rounded-xl border border-cyan-800/40 hover:bg-cyan-900/40 transition-colors">
+                        <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 bg-cyan-950/30 p-5 rounded-xl border border-cyan-800/40 hover:bg-cyan-900/40 transition-colors text-center sm:text-left">
                             <span className="text-3xl bg-cyan-900/50 p-3 rounded-xl mt-1">📱</span>
                             <div>
                                 <p className="text-xs md:text-sm text-cyan-500 uppercase font-bold tracking-[0.2em] mb-2">Comms Network</p>
                                 <p className="font-mono text-base">+91-8263852712</p>
                             </div>
                         </div>
-                        <div className="flex items-start gap-4 bg-cyan-950/30 p-5 rounded-xl border border-cyan-800/40 hover:bg-cyan-900/40 transition-colors">
+                        <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 bg-cyan-950/30 p-5 rounded-xl border border-cyan-800/40 hover:bg-cyan-900/40 transition-colors text-center sm:text-left">
                             <span className="text-3xl bg-cyan-900/50 p-3 rounded-xl mt-1">🌍</span>
                             <div>
                                 <p className="text-xs md:text-sm text-cyan-500 uppercase font-bold tracking-[0.2em] mb-2">Location Base</p>
