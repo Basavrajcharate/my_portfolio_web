@@ -94,7 +94,7 @@ export default function LightPortfolio() {
                         <img
                             src="/images/profile.jpg"
                             alt="Basavraj Charate Profile"
-                            className="relative w-full h-full object-cover rounded-full border-4 border-white shadow-2xl"
+                            className="relative w-full h-full object-cover object-top rounded-full border-4 border-white shadow-2xl"
                         />
                     </motion.div>
                 </div>
@@ -122,7 +122,7 @@ export default function LightPortfolio() {
                         className="grid md:grid-cols-2 gap-12"
                     >
                         {/* Education */}
-                        <motion.div variants={fadeInUp} className="bg-slate-50 p-8 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
+                        <motion.div variants={fadeInUp} className="bg-slate-50 p-8 rounded-2xl border border-slate-100 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
                             <h3 className="text-2xl font-bold mb-6 flex items-center gap-2">
                                 <span className="w-8 h-8 rounded bg-blue-100 flex items-center justify-center text-blue-600">
                                     <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
@@ -154,7 +154,7 @@ export default function LightPortfolio() {
                         </motion.div>
 
                         {/* Experience */}
-                        <motion.div variants={fadeInUp} className="bg-slate-50 p-8 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
+                        <motion.div variants={fadeInUp} className="bg-slate-50 p-8 rounded-2xl border border-slate-100 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
                             <h3 className="text-2xl font-bold mb-6 flex items-center gap-2">
                                 <span className="w-8 h-8 rounded bg-emerald-100 flex items-center justify-center text-emerald-600">
                                     <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
@@ -228,27 +228,27 @@ export default function LightPortfolio() {
                         variants={staggerContainer} initial="initial" whileInView="whileInView"
                         className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
                     >
-                        <motion.a variants={fadeInUp} href="/Web Development Certificate.pdf" target="_blank" rel="noopener noreferrer" className="block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:border-blue-400 hover:shadow-md transition-all group">
+                        <motion.a variants={fadeInUp} href="/Web Development Certificate.pdf" target="_blank" rel="noopener noreferrer" className="block bg-white p-6 rounded-xl shadow-md border border-slate-200 hover:shadow-xl hover:-translate-y-1 duration-300 hover:border-blue-400 hover:shadow-md transition-all group">
                             <h3 className="font-bold text-lg text-slate-800 group-hover:text-blue-600 transition-colors">Web Development</h3>
                             <p className="text-slate-500 mt-2">Udemy</p>
                         </motion.a>
 
-                        <motion.a variants={fadeInUp} href="/Accunture Certificate.pdf" target="_blank" rel="noopener noreferrer" className="block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:border-purple-400 hover:shadow-md transition-all group">
+                        <motion.a variants={fadeInUp} href="/Accunture Certificate.pdf" target="_blank" rel="noopener noreferrer" className="block bg-white p-6 rounded-xl shadow-md border border-slate-200 hover:shadow-xl hover:-translate-y-1 duration-300 hover:border-purple-400 hover:shadow-md transition-all group">
                             <h3 className="font-bold text-lg text-slate-800 group-hover:text-purple-600 transition-colors">Acquiring Data (Level 1 - AI Fundamentals)</h3>
                             <p className="text-slate-500 mt-2">Accenture</p>
                         </motion.a>
 
-                        <motion.a variants={fadeInUp} href="/Coursera K8Y4O3QZD5NN--Final Certificate.pdf" target="_blank" rel="noopener noreferrer" className="block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:border-blue-500 hover:shadow-md transition-all group">
+                        <motion.a variants={fadeInUp} href="/Coursera K8Y4O3QZD5NN--Final Certificate.pdf" target="_blank" rel="noopener noreferrer" className="block bg-white p-6 rounded-xl shadow-md border border-slate-200 hover:shadow-xl hover:-translate-y-1 duration-300 hover:border-blue-500 hover:shadow-md transition-all group">
                             <h3 className="font-bold text-lg text-slate-800 group-hover:text-blue-500 transition-colors">Microsoft Power BI Data Analyst</h3>
                             <p className="text-slate-500 mt-2">Coursera</p>
                         </motion.a>
 
-                        <motion.a variants={fadeInUp} href="/dsa.pdf" target="_blank" rel="noopener noreferrer" className="block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:border-orange-400 hover:shadow-md transition-all group">
+                        <motion.a variants={fadeInUp} href="/dsa.pdf" target="_blank" rel="noopener noreferrer" className="block bg-white p-6 rounded-xl shadow-md border border-slate-200 hover:shadow-xl hover:-translate-y-1 duration-300 hover:border-orange-400 hover:shadow-md transition-all group">
                             <h3 className="font-bold text-lg text-slate-800 group-hover:text-orange-600 transition-colors">Data Structure and Algorithms (DSA)</h3>
                             <p className="text-slate-500 mt-2">Apna College</p>
                         </motion.a>
 
-                        <motion.a variants={fadeInUp} href="/soft-skills.pdf" target="_blank" rel="noopener noreferrer" className="block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:border-emerald-400 hover:shadow-md transition-all group">
+                        <motion.a variants={fadeInUp} href="/soft-skills.pdf" target="_blank" rel="noopener noreferrer" className="block bg-white p-6 rounded-xl shadow-md border border-slate-200 hover:shadow-xl hover:-translate-y-1 duration-300 hover:border-emerald-400 hover:shadow-md transition-all group">
                             <h3 className="font-bold text-lg text-slate-800 group-hover:text-emerald-600 transition-colors">Developing soft skills and personality</h3>
                             <p className="text-slate-500 mt-2">NPTEL</p>
                         </motion.a>
@@ -270,7 +270,7 @@ export default function LightPortfolio() {
                         variants={staggerContainer} initial="initial" whileInView="whileInView"
                         className="grid md:grid-cols-2 lg:grid-cols-4 gap-6"
                     >
-                        <motion.div variants={fadeInUp} className="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
+                        <motion.div variants={fadeInUp} className="bg-white p-6 rounded-xl shadow-md border border-slate-200 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
                             <h3 className="font-bold text-xl mb-4 text-slate-800 border-b pb-2">Languages</h3>
                             <div className="flex flex-wrap gap-2">
                                 {["Python", "Java", "C", "Embedded C"].map(tech => (
@@ -279,7 +279,7 @@ export default function LightPortfolio() {
                             </div>
                         </motion.div>
 
-                        <motion.div variants={fadeInUp} className="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
+                        <motion.div variants={fadeInUp} className="bg-white p-6 rounded-xl shadow-md border border-slate-200 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
                             <h3 className="font-bold text-xl mb-4 text-slate-800 border-b pb-2">Web Dev</h3>
                             <div className="flex flex-wrap gap-2">
                                 {["HTML", "CSS", "JavaScript", "React", "Node.js", "MongoDB", "Express"].map(tech => (
@@ -288,7 +288,7 @@ export default function LightPortfolio() {
                             </div>
                         </motion.div>
 
-                        <motion.div variants={fadeInUp} className="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
+                        <motion.div variants={fadeInUp} className="bg-white p-6 rounded-xl shadow-md border border-slate-200 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
                             <h3 className="font-bold text-xl mb-4 text-slate-800 border-b pb-2">Machine Learning</h3>
                             <div className="flex flex-wrap gap-2">
                                 {["QML", "Qiskit", "PennyLane"].map(tech => (
@@ -297,7 +297,7 @@ export default function LightPortfolio() {
                             </div>
                         </motion.div>
 
-                        <motion.div variants={fadeInUp} className="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
+                        <motion.div variants={fadeInUp} className="bg-white p-6 rounded-xl shadow-md border border-slate-200 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
                             <h3 className="font-bold text-xl mb-4 text-slate-800 border-b pb-2">Databases & Tools</h3>
                             <div className="flex flex-wrap gap-2">
                                 {["MySQL", "Git", "GitHub", "Arduino", "ESP32", "Fusion 360"].map(tech => (

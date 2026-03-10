@@ -21,7 +21,7 @@ export default function Overlay() {
                             <img
                                 src="/images/profile.jpg"
                                 alt="Basavraj Charate"
-                                className="w-full h-full object-cover"
+                                className="w-full h-full object-cover object-top"
                             />
                             <div className="absolute inset-0 bg-blue-500/10 mix-blend-overlay pointer-events-none"></div>
                         </div>
