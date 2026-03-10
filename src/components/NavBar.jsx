@@ -43,7 +43,7 @@ export default function NavBar() {
                 <div className="flex items-center justify-between h-16">
                     <div className="flex items-center">
                         <span className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500 font-mono tracking-widest cursor-pointer" onClick={() => scrollTo(0, 'hero')}>
-                            B.CHARATE
+                            B
                         </span>
                     </div>
 
