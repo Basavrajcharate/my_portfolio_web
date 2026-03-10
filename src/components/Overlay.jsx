@@ -111,15 +111,15 @@ export default function Overlay() {
             </section>
 
             {/* About Section - Page 2 */}
-            <section className="h-screen w-full flex items-center justify-center px-10 md:px-20 relative pointer-events-auto">
+            <section className="h-screen w-full flex items-center justify-center px-4 md:px-20 relative pointer-events-auto">
                 {/* Changed layout back to justify-center and switched flex-col to flex-col md:flex-row to make them side by side */}
-                <div className="flex flex-col md:flex-row gap-8 w-full max-w-7xl items-stretch justify-center pt-32 pb-20 h-full overflow-y-auto pr-4 custom-scrollbar pointer-events-auto mx-auto">
+                <div className="flex flex-col md:flex-row gap-6 md:gap-8 w-full max-w-7xl items-stretch md:justify-center pt-24 md:pt-32 pb-24 md:pb-20 h-full overflow-y-auto pr-2 md:pr-4 custom-scrollbar pointer-events-auto mx-auto">
 
                     {/* Education Data */}
-                    <div className="w-full md:w-1/2 flex flex-col bg-gradient-to-br from-[#0f172a]/95 to-[#020617]/95 border-2 border-green-500/40 p-10 rounded-2xl backdrop-blur-2xl shadow-[0_0_30px_rgba(16,185,129,0.2)] hover:border-green-400/80 transition-all duration-300">
-                        <div className="flex items-center gap-3 mb-8">
+                    <div className="w-full md:w-1/2 flex flex-col bg-gradient-to-br from-[#0f172a]/95 to-[#020617]/95 border-2 border-green-500/40 p-6 md:p-10 rounded-2xl backdrop-blur-2xl shadow-[0_0_30px_rgba(16,185,129,0.2)] hover:border-green-400/80 transition-all duration-300">
+                        <div className="flex items-center gap-3 mb-6 md:mb-8">
                             <div className="w-4 h-4 rounded-full bg-green-400 animate-pulse shadow-[0_0_10px_rgba(74,222,128,0.8)]"></div>
-                            <h3 className="text-3xl font-black text-green-400 tracking-wider">Education Data</h3>
+                            <h3 className="text-2xl md:text-3xl font-black text-green-400 tracking-wider">Education Data</h3>
                         </div>
                         <div className="space-y-6 flex-1">
                             <div className="border-l-4 border-green-500/50 pl-6">
@@ -141,10 +141,10 @@ export default function Overlay() {
                     </div>
 
                     {/* Career Trajectory */}
-                    <div className="w-full md:w-1/2 flex flex-col bg-gradient-to-br from-[#0f172a]/95 to-[#020617]/95 border-2 border-emerald-500/40 p-10 rounded-2xl backdrop-blur-2xl shadow-[0_0_30px_rgba(16,185,129,0.2)] hover:border-emerald-400/80 transition-all duration-300">
-                        <div className="flex items-center gap-3 mb-8">
+                    <div className="w-full md:w-1/2 flex flex-col bg-gradient-to-br from-[#0f172a]/95 to-[#020617]/95 border-2 border-emerald-500/40 p-6 md:p-10 rounded-2xl backdrop-blur-2xl shadow-[0_0_30px_rgba(16,185,129,0.2)] hover:border-emerald-400/80 transition-all duration-300">
+                        <div className="flex items-center gap-3 mb-6 md:mb-8">
                             <div className="w-4 h-4 rounded-full bg-emerald-400 animate-pulse shadow-[0_0_10px_rgba(52,211,153,0.8)]"></div>
-                            <h3 className="text-3xl font-black text-emerald-400 tracking-wider">Career Trajectory</h3>
+                            <h3 className="text-2xl md:text-3xl font-black text-emerald-400 tracking-wider">Career Trajectory</h3>
                         </div>
 
                         <div className="space-y-8 flex-1 pb-4">
