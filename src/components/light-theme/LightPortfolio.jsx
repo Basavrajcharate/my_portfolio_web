@@ -1,24 +1,64 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 export default function LightPortfolio() {
+    const fadeInUp = {
+        initial: { opacity: 0, y: 30 },
+        whileInView: { opacity: 1, y: 0 },
+        viewport: { once: true, margin: "-100px" },
+        transition: { duration: 0.7, ease: "easeOut" }
+    };
+
+    const staggerContainer = {
+        initial: { opacity: 0 },
+        whileInView: { opacity: 1 },
+        viewport: { once: true, margin: "-100px" },
+        transition: { staggerChildren: 0.2 }
+    };
+
     return (
         <div className="min-h-screen bg-gray-50 text-slate-800 font-sans overflow-x-hidden pt-16">
 
             {/* Hero Section */}
             <section id="hero" className="min-h-[85vh] flex flex-col justify-center items-center px-6 md:px-4 max-w-6xl mx-auto">
                 <div className="flex flex-col md:flex-row items-center justify-between w-full gap-12 mt-10 md:mt-0">
-                    <div className="flex-1 space-y-6 text-center md:text-left mt-8 md:mt-0">
-                        <div className="inline-block px-4 py-1.5 rounded-full bg-blue-100 text-blue-700 font-semibold text-sm tracking-wide mb-2 md:mb-4">
+                    <motion.div 
+                        className="flex-1 space-y-6 text-center md:text-left mt-8 md:mt-0"
+                        initial={{ opacity: 0, x: -50 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.8, ease: "easeOut" }}
+                    >
+                        <motion.div 
+                            className="inline-block px-4 py-1.5 rounded-full bg-blue-100 text-blue-700 font-semibold text-sm tracking-wide mb-2 md:mb-4"
+                            initial={{ opacity: 0, scale: 0.8 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                            transition={{ delay: 0.3, duration: 0.5 }}
+                        >
                             Welcome to my profile
-                        </div>
-                        <h1 className="text-4xl sm:text-5xl md:text-7xl font-extrabold tracking-tight text-slate-900 leading-tight">
+                        </motion.div>
+                        <motion.h1 
+                            className="text-4xl sm:text-5xl md:text-7xl font-extrabold tracking-tight text-slate-900 leading-tight"
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ delay: 0.5, duration: 0.6 }}
+                        >
                             Hi, I'm <span className="text-blue-600">Basavraj</span> Charate
-                        </h1>
-                        <p className="text-xl text-slate-600 max-w-2xl mx-auto md:mx-0 leading-relaxed">
+                        </motion.h1>
+                        <motion.p 
+                            className="text-xl text-slate-600 max-w-2xl mx-auto md:mx-0 leading-relaxed"
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ delay: 0.7, duration: 0.6 }}
+                        >
                             Web Developer & AIML Specialist building elegant, sustainable solutions and exploring the frontiers of Machine Learning.
-                        </p>
+                        </motion.p>
 
-                        <div className="flex flex-wrap gap-4 pt-6 justify-center md:justify-start">
+                        <motion.div 
+                            className="flex flex-wrap gap-4 pt-6 justify-center md:justify-start"
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ delay: 0.9, duration: 0.6 }}
+                        >
                             <a
                                 href="/resume.pdf"
                                 download="Basavraj_Charate_Resume.pdf"
@@ -41,32 +81,48 @@ export default function LightPortfolio() {
                                 </svg>
                                 View Resume
                             </a>
-                        </div>
-                    </div>
+                        </motion.div>
+                    </motion.div>
 
-                    <div className="w-64 h-64 md:w-80 md:h-80 relative flex-shrink-0">
+                    <motion.div 
+                        className="w-64 h-64 md:w-80 md:h-80 relative flex-shrink-0"
+                        initial={{ opacity: 0, scale: 0.8, rotate: -5 }}
+                        animate={{ opacity: 1, scale: 1, rotate: 0 }}
+                        transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+                    >
                         <div className="absolute inset-0 bg-blue-200 rounded-full blur-3xl opacity-50"></div>
                         <img
                             src="/images/profile.jpg"
                             alt="Basavraj Charate Profile"
                             className="relative w-full h-full object-cover rounded-full border-4 border-white shadow-2xl"
                         />
-                    </div>
+                    </motion.div>
                 </div>
             </section>
 
             {/* About & Education */}
             <section id="about" className="py-20 bg-white">
                 <div className="max-w-6xl mx-auto px-4">
-                    <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center">About & Journey</h2>
+                    <motion.h2 
+                        variants={fadeInUp} initial="initial" whileInView="whileInView"
+                        className="text-3xl md:text-4xl font-bold mb-6 text-center"
+                    >
+                        About & Journey
+                    </motion.h2>
 
-                    <p className="max-w-3xl mx-auto text-lg text-slate-600 text-center mb-12 leading-relaxed">
+                    <motion.p 
+                        variants={fadeInUp} initial="initial" whileInView="whileInView"
+                        className="max-w-3xl mx-auto text-lg text-slate-600 text-center mb-12 leading-relaxed"
+                    >
                         I am a motivated Computer Science student with a strong passion for software development, artificial intelligence, and data-driven problem solving. I enjoy transforming ideas into practical solutions and working on projects that address real-world challenges.
-                    </p>
+                    </motion.p>
 
-                    <div className="grid md:grid-cols-2 gap-12">
+                    <motion.div 
+                        variants={staggerContainer} initial="initial" whileInView="whileInView"
+                        className="grid md:grid-cols-2 gap-12"
+                    >
                         {/* Education */}
-                        <div className="bg-slate-50 p-8 rounded-2xl border border-slate-100 shadow-sm">
+                        <motion.div variants={fadeInUp} className="bg-slate-50 p-8 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
                             <h3 className="text-2xl font-bold mb-6 flex items-center gap-2">
                                 <span className="w-8 h-8 rounded bg-blue-100 flex items-center justify-center text-blue-600">
                                     <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
@@ -95,10 +151,10 @@ export default function LightPortfolio() {
                                     <p className="text-sm font-medium text-slate-500 mt-1">Percentage: 88.20%</p>
                                 </div>
                             </div>
-                        </div>
+                        </motion.div>
 
                         {/* Experience */}
-                        <div className="bg-slate-50 p-8 rounded-2xl border border-slate-100 shadow-sm">
+                        <motion.div variants={fadeInUp} className="bg-slate-50 p-8 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
                             <h3 className="text-2xl font-bold mb-6 flex items-center gap-2">
                                 <span className="w-8 h-8 rounded bg-emerald-100 flex items-center justify-center text-emerald-600">
                                     <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
@@ -142,109 +198,134 @@ export default function LightPortfolio() {
                                     <p className="text-slate-600 mt-1">Kallakarjal Village</p>
                                 </div>
                             </div>
-                        </div>
-                    </div>
+                        </motion.div>
+                    </motion.div>
                 </div>
             </section>
 
             {/* Projects (Placeholder) */}
             <section id="projects" className="py-20 bg-white border-t border-slate-200">
-                <div className="max-w-6xl mx-auto px-4 text-center">
+                <motion.div 
+                    variants={fadeInUp} initial="initial" whileInView="whileInView"
+                    className="max-w-6xl mx-auto px-4 text-center"
+                >
                     <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center text-slate-800">Projects</h2>
                     <p className="text-slate-500">Detailed project showcases coming soon.</p>
-                </div>
+                </motion.div>
             </section>
 
             {/* Certifications Section */}
             <section id="certifications" className="py-20 bg-slate-50 border-t border-slate-200">
                 <div className="max-w-6xl mx-auto px-4">
-                    <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-slate-800">Licenses & Certifications</h2>
+                    <motion.h2 
+                        variants={fadeInUp} initial="initial" whileInView="whileInView"
+                        className="text-3xl md:text-4xl font-bold mb-12 text-center text-slate-800"
+                    >
+                        Licenses & Certifications
+                    </motion.h2>
 
-                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        <a href="/Web Development Certificate.pdf" target="_blank" rel="noopener noreferrer" className="block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:border-blue-400 hover:shadow-md transition-all group">
+                    <motion.div 
+                        variants={staggerContainer} initial="initial" whileInView="whileInView"
+                        className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
+                    >
+                        <motion.a variants={fadeInUp} href="/Web Development Certificate.pdf" target="_blank" rel="noopener noreferrer" className="block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:border-blue-400 hover:shadow-md transition-all group">
                             <h3 className="font-bold text-lg text-slate-800 group-hover:text-blue-600 transition-colors">Web Development</h3>
                             <p className="text-slate-500 mt-2">Udemy</p>
-                        </a>
+                        </motion.a>
 
-                        <a href="/Accunture Certificate.pdf" target="_blank" rel="noopener noreferrer" className="block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:border-purple-400 hover:shadow-md transition-all group">
+                        <motion.a variants={fadeInUp} href="/Accunture Certificate.pdf" target="_blank" rel="noopener noreferrer" className="block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:border-purple-400 hover:shadow-md transition-all group">
                             <h3 className="font-bold text-lg text-slate-800 group-hover:text-purple-600 transition-colors">Acquiring Data (Level 1 - AI Fundamentals)</h3>
                             <p className="text-slate-500 mt-2">Accenture</p>
-                        </a>
+                        </motion.a>
 
-                        <a href="/Coursera K8Y4O3QZD5NN--Final Certificate.pdf" target="_blank" rel="noopener noreferrer" className="block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:border-blue-500 hover:shadow-md transition-all group">
+                        <motion.a variants={fadeInUp} href="/Coursera K8Y4O3QZD5NN--Final Certificate.pdf" target="_blank" rel="noopener noreferrer" className="block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:border-blue-500 hover:shadow-md transition-all group">
                             <h3 className="font-bold text-lg text-slate-800 group-hover:text-blue-500 transition-colors">Microsoft Power BI Data Analyst</h3>
                             <p className="text-slate-500 mt-2">Coursera</p>
-                        </a>
+                        </motion.a>
 
-                        <a href="/dsa.pdf" target="_blank" rel="noopener noreferrer" className="block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:border-orange-400 hover:shadow-md transition-all group">
+                        <motion.a variants={fadeInUp} href="/dsa.pdf" target="_blank" rel="noopener noreferrer" className="block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:border-orange-400 hover:shadow-md transition-all group">
                             <h3 className="font-bold text-lg text-slate-800 group-hover:text-orange-600 transition-colors">Data Structure and Algorithms (DSA)</h3>
                             <p className="text-slate-500 mt-2">Apna College</p>
-                        </a>
+                        </motion.a>
 
-                        <a href="/soft-skills.pdf" target="_blank" rel="noopener noreferrer" className="block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:border-emerald-400 hover:shadow-md transition-all group">
+                        <motion.a variants={fadeInUp} href="/soft-skills.pdf" target="_blank" rel="noopener noreferrer" className="block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:border-emerald-400 hover:shadow-md transition-all group">
                             <h3 className="font-bold text-lg text-slate-800 group-hover:text-emerald-600 transition-colors">Developing soft skills and personality</h3>
                             <p className="text-slate-500 mt-2">NPTEL</p>
-                        </a>
-                    </div>
+                        </motion.a>
+                    </motion.div>
                 </div>
             </section>
 
             {/* Tech Stack */}
             <section id="tech-stack" className="py-20 bg-white border-t border-slate-200">
                 <div className="max-w-6xl mx-auto px-4">
-                    <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">Technical Arsenal</h2>
+                    <motion.h2 
+                        variants={fadeInUp} initial="initial" whileInView="whileInView"
+                        className="text-3xl md:text-4xl font-bold mb-12 text-center"
+                    >
+                        Technical Arsenal
+                    </motion.h2>
 
-                    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                        <div className="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
+                    <motion.div 
+                        variants={staggerContainer} initial="initial" whileInView="whileInView"
+                        className="grid md:grid-cols-2 lg:grid-cols-4 gap-6"
+                    >
+                        <motion.div variants={fadeInUp} className="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
                             <h3 className="font-bold text-xl mb-4 text-slate-800 border-b pb-2">Languages</h3>
                             <div className="flex flex-wrap gap-2">
                                 {["Python", "Java", "C", "Embedded C"].map(tech => (
                                     <span key={tech} className="bg-blue-50 text-blue-700 text-sm px-3 py-1 rounded-full">{tech}</span>
                                 ))}
                             </div>
-                        </div>
+                        </motion.div>
 
-                        <div className="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
+                        <motion.div variants={fadeInUp} className="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
                             <h3 className="font-bold text-xl mb-4 text-slate-800 border-b pb-2">Web Dev</h3>
                             <div className="flex flex-wrap gap-2">
                                 {["HTML", "CSS", "JavaScript", "React", "Node.js", "MongoDB", "Express"].map(tech => (
                                     <span key={tech} className="bg-indigo-50 text-indigo-700 text-sm px-3 py-1 rounded-full">{tech}</span>
                                 ))}
                             </div>
-                        </div>
+                        </motion.div>
 
-                        <div className="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
+                        <motion.div variants={fadeInUp} className="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
                             <h3 className="font-bold text-xl mb-4 text-slate-800 border-b pb-2">Machine Learning</h3>
                             <div className="flex flex-wrap gap-2">
                                 {["QML", "Qiskit", "PennyLane"].map(tech => (
                                     <span key={tech} className="bg-purple-50 text-purple-700 text-sm px-3 py-1 rounded-full">{tech}</span>
                                 ))}
                             </div>
-                        </div>
+                        </motion.div>
 
-                        <div className="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
+                        <motion.div variants={fadeInUp} className="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
                             <h3 className="font-bold text-xl mb-4 text-slate-800 border-b pb-2">Databases & Tools</h3>
                             <div className="flex flex-wrap gap-2">
                                 {["MySQL", "Git", "GitHub", "Arduino", "ESP32", "Fusion 360"].map(tech => (
                                     <span key={tech} className="bg-orange-50 text-orange-700 text-sm px-3 py-1 rounded-full">{tech}</span>
                                 ))}
                             </div>
-                        </div>
-                    </div>
+                        </motion.div>
+                    </motion.div>
                 </div>
             </section>
 
             {/* Fast Footer / Contact */}
             <footer id="contact" className="bg-slate-900 text-slate-300 py-16 px-4 md:px-8">
                 <div className="max-w-6xl mx-auto px-4">
-                    <div className="text-center mb-12">
+                    <motion.div 
+                        variants={fadeInUp} initial="initial" whileInView="whileInView"
+                        className="text-center mb-12"
+                    >
                         <h2 className="text-3xl font-bold text-white mb-4">Let's Connect</h2>
                         <p className="text-slate-400 max-w-2xl mx-auto">Open to new opportunities, interesting projects, and networking.</p>
-                    </div>
+                    </motion.div>
 
-                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+                    <motion.div 
+                        variants={staggerContainer} initial="initial" whileInView="whileInView"
+                        className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12"
+                    >
                         {/* Contact Details */}
-                        <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
+                        <motion.div variants={fadeInUp} className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
                             <h3 className="text-white font-bold text-lg mb-4 flex items-center gap-2">
                                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-blue-400" viewBox="0 0 20 20" fill="currentColor">
                                     <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
@@ -261,10 +342,10 @@ export default function LightPortfolio() {
                                     <a href="mailto:basavraj.charate130904@gmail.com" className="hover:text-blue-400 transition-colors break-all">basavraj.charate130904@gmail.com</a>
                                 </li>
                             </ul>
-                        </div>
+                        </motion.div>
 
                         {/* Addresses */}
-                        <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
+                        <motion.div variants={fadeInUp} className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
                             <h3 className="text-white font-bold text-lg mb-4 flex items-center gap-2">
                                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-emerald-400" viewBox="0 0 20 20" fill="currentColor">
                                     <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
@@ -281,10 +362,10 @@ export default function LightPortfolio() {
                                     <span>Charate Wasti-2, Kallakarjal, Akkalkot,<br />Solapur - 413219</span>
                                 </li>
                             </ul>
-                        </div>
+                        </motion.div>
 
                         {/* Social Links */}
-                        <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700 md:col-span-2 lg:col-span-1">
+                        <motion.div variants={fadeInUp} className="bg-slate-800/50 p-6 rounded-xl border border-slate-700 md:col-span-2 lg:col-span-1">
                             <h3 className="text-white font-bold text-lg mb-4 flex items-center gap-2">
                                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-purple-400" viewBox="0 0 20 20" fill="currentColor">
                                     <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z" />
@@ -312,8 +393,8 @@ export default function LightPortfolio() {
                                     </svg>
                                 </a>
                             </div>
-                        </div>
-                    </div>
+                        </motion.div>
+                    </motion.div>
 
                     <div className="text-center pt-8 border-t border-slate-800">
                         <p className="text-sm text-slate-500">© 2026 Basavraj Charate. All rights reserved.</p>
