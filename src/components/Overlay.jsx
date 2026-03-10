@@ -116,12 +116,12 @@ export default function Overlay() {
                 <div className="flex flex-col md:flex-row gap-6 md:gap-8 w-full max-w-7xl items-stretch md:justify-center pt-24 md:pt-32 pb-24 md:pb-20 h-full overflow-y-auto pr-2 md:pr-4 custom-scrollbar pointer-events-auto mx-auto">
 
                     {/* Education Data */}
-                    <div className="w-full md:w-1/2 flex flex-col bg-gradient-to-br from-[#0f172a]/95 to-[#020617]/95 border-2 border-green-500/40 p-6 md:p-10 rounded-2xl backdrop-blur-2xl shadow-[0_0_30px_rgba(16,185,129,0.2)] hover:border-green-400/80 transition-all duration-300">
-                        <div className="flex items-center gap-3 mb-6 md:mb-8">
+                    <div className="w-full md:w-1/2 flex flex-col bg-gradient-to-br from-[#0f172a]/95 to-[#020617]/95 border-2 border-green-500/40 p-6 md:p-10 rounded-2xl backdrop-blur-2xl shadow-[0_0_30px_rgba(16,185,129,0.2)] hover:border-green-400/80 transition-all duration-300 md:max-h-[80vh]">
+                        <div className="flex items-center gap-3 mb-6 md:mb-8 shrink-0">
                             <div className="w-4 h-4 rounded-full bg-green-400 animate-pulse shadow-[0_0_10px_rgba(74,222,128,0.8)]"></div>
                             <h3 className="text-2xl md:text-3xl font-black text-green-400 tracking-wider">Education Data</h3>
                         </div>
-                        <div className="space-y-6 flex-1">
+                        <div className="space-y-6 flex-1 overflow-y-auto custom-scrollbar pr-2 md:pr-4">
                             <div className="border-l-4 border-green-500/50 pl-6">
                                 <h4 className="font-bold text-green-50 text-xl">B-Tech CSE in AIML (2022 - 2026)</h4>
                                 <p className="text-lg text-green-200/80 mt-1">D. Y. Patil International University, Akurdi</p>
@@ -141,16 +141,16 @@ export default function Overlay() {
                     </div>
 
                     {/* Career Trajectory */}
-                    <div className="w-full md:w-1/2 flex flex-col bg-gradient-to-br from-[#0f172a]/95 to-[#020617]/95 border-2 border-emerald-500/40 p-6 md:p-10 rounded-2xl backdrop-blur-2xl shadow-[0_0_30px_rgba(16,185,129,0.2)] hover:border-emerald-400/80 transition-all duration-300">
-                        <div className="flex items-center gap-3 mb-6 md:mb-8">
+                    <div className="w-full md:w-1/2 flex flex-col bg-gradient-to-br from-[#0f172a]/95 to-[#020617]/95 border-2 border-emerald-500/40 p-6 md:p-10 rounded-2xl backdrop-blur-2xl shadow-[0_0_30px_rgba(16,185,129,0.2)] hover:border-emerald-400/80 transition-all duration-300 md:max-h-[80vh]">
+                        <div className="flex items-center gap-3 mb-6 md:mb-8 shrink-0">
                             <div className="w-4 h-4 rounded-full bg-emerald-400 animate-pulse shadow-[0_0_10px_rgba(52,211,153,0.8)]"></div>
                             <h3 className="text-2xl md:text-3xl font-black text-emerald-400 tracking-wider">Career Trajectory</h3>
                         </div>
 
-                        <div className="space-y-8 flex-1 pb-4">
+                        <div className="space-y-8 flex-1 pb-4 overflow-y-auto custom-scrollbar pr-2 md:pr-4">
                             <div className="border-l-4 border-emerald-500/50 pl-6">
                                 <h4 className="font-bold text-emerald-50 text-xl flex flex-col md:flex-row md:justify-between items-start md:items-center">
-                                    <span>Research Assistant - QML</span>
+                                    <a href="/research-assistant.pdf" target="_blank" rel="noopener noreferrer" className="hover:text-emerald-300 underline underline-offset-4 decoration-emerald-500/30 hover:decoration-emerald-300 transition-all cursor-pointer">Research Assistant - QML</a>
                                     <span className="text-base font-mono text-emerald-400 mt-2 md:mt-0 bg-emerald-950/50 px-3 py-1 rounded border border-emerald-700/50">May '25 - Aug '25</span>
                                 </h4>
                                 <p className="text-lg text-emerald-200/80 mt-2 mb-3 font-medium">University of Lucknow, India</p>
@@ -162,7 +162,7 @@ export default function Overlay() {
 
                             <div className="border-l-4 border-emerald-500/50 pl-6">
                                 <h4 className="font-bold text-emerald-50 text-xl flex flex-col md:flex-row md:justify-between items-start md:items-center">
-                                    <span>Web Developer & Tech Intern</span>
+                                    <a href="/sarv-intern.pdf" target="_blank" rel="noopener noreferrer" className="hover:text-emerald-300 underline underline-offset-4 decoration-emerald-500/30 hover:decoration-emerald-300 transition-all cursor-pointer">Web Developer & Tech Intern</a>
                                     <span className="text-base font-mono text-emerald-400 mt-2 md:mt-0 bg-emerald-950/50 px-3 py-1 rounded border border-emerald-700/50">May '24 - July '24</span>
                                 </h4>
                                 <p className="text-lg text-emerald-200/80 mt-2 mb-3 font-medium">Sarv Enterprises (Remote)</p>
@@ -173,7 +173,7 @@ export default function Overlay() {
 
                             <div className="border-l-4 border-emerald-500/50 pl-6">
                                 <h4 className="font-bold text-emerald-50 text-xl flex flex-col md:flex-row md:justify-between items-start md:items-center">
-                                    <span>Web Developer Intern</span>
+                                    <a href="/agarwal-intern.pdf" target="_blank" rel="noopener noreferrer" className="hover:text-emerald-300 underline underline-offset-4 decoration-emerald-500/30 hover:decoration-emerald-300 transition-all cursor-pointer">Web Developer Intern</a>
                                     <span className="text-base font-mono text-emerald-400 mt-2 md:mt-0 bg-emerald-950/50 px-3 py-1 rounded border border-emerald-700/50">June '24 - Sept '24</span>
                                 </h4>
                                 <p className="text-lg text-emerald-200/80 mt-2 mb-3 font-medium">Agarwal Creation Fashions Pvt. Ltd</p>
@@ -184,7 +184,7 @@ export default function Overlay() {
 
                             <div className="border-l-4 border-emerald-500/50 pl-6">
                                 <h4 className="font-bold text-emerald-50 text-xl flex flex-col md:flex-row md:justify-between items-start md:items-center">
-                                    <span>Rural Development Project</span>
+                                    <a href="/rural-development.pdf" target="_blank" rel="noopener noreferrer" className="hover:text-emerald-300 underline underline-offset-4 decoration-emerald-500/30 hover:decoration-emerald-300 transition-all cursor-pointer">Rural Development Project</a>
                                     <span className="text-base font-mono text-emerald-400 mt-2 md:mt-0 bg-emerald-950/50 px-3 py-1 rounded border border-emerald-700/50">June '24 - Sept '24</span>
                                 </h4>
                                 <p className="text-lg text-emerald-200/80 mt-2 mb-3 font-medium">Kallakarjal Village</p>

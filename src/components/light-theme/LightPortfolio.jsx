@@ -112,7 +112,7 @@ export default function LightPortfolio() {
                                 <div className="border-l-2 border-emerald-200 pl-4 relative">
                                     <div className="absolute w-3 h-3 bg-emerald-500 rounded-full -left-[7px] top-2"></div>
                                     <h4 className="font-bold text-lg flex justify-between items-center">
-                                        <span>Web Developer & Tech Intern</span>
+                                        <a href="/sarv-intern.pdf" target="_blank" rel="noopener noreferrer" className="hover:text-emerald-600 underline underline-offset-4 decoration-emerald-200 hover:decoration-emerald-500 transition-colors cursor-pointer">Web Developer & Tech Intern</a>
                                         <span className="text-xs bg-emerald-100 text-emerald-800 px-2 py-1 rounded">May '24 - July '25</span>
                                     </h4>
                                     <p className="text-slate-600 mt-1">Sarv Enterprises (Remote)</p>
@@ -120,7 +120,7 @@ export default function LightPortfolio() {
                                 <div className="border-l-2 border-emerald-200 pl-4 relative">
                                     <div className="absolute w-3 h-3 bg-emerald-500 rounded-full -left-[7px] top-2"></div>
                                     <h4 className="font-bold text-lg flex justify-between items-center">
-                                        <span>Research Assistant - QML</span>
+                                        <a href="/research-assistant.pdf" target="_blank" rel="noopener noreferrer" className="hover:text-emerald-600 underline underline-offset-4 decoration-emerald-200 hover:decoration-emerald-500 transition-colors cursor-pointer">Research Assistant - QML</a>
                                         <span className="text-xs bg-emerald-100 text-emerald-800 px-2 py-1 rounded">May '25 - Aug '25</span>
                                     </h4>
                                     <p className="text-slate-600 mt-1">University of Lucknow</p>
@@ -128,10 +128,18 @@ export default function LightPortfolio() {
                                 <div className="border-l-2 border-emerald-200 pl-4 relative">
                                     <div className="absolute w-3 h-3 bg-emerald-500 rounded-full -left-[7px] top-2"></div>
                                     <h4 className="font-bold text-lg flex justify-between items-center">
-                                        <span>Web Developer Intern</span>
+                                        <a href="/agarwal-intern.pdf" target="_blank" rel="noopener noreferrer" className="hover:text-emerald-600 underline underline-offset-4 decoration-emerald-200 hover:decoration-emerald-500 transition-colors cursor-pointer">Web Developer Intern</a>
                                         <span className="text-xs bg-emerald-100 text-emerald-800 px-2 py-1 rounded">Jun '24 - Sep '24</span>
                                     </h4>
                                     <p className="text-slate-600 mt-1">Agarwal Creation Fashions</p>
+                                </div>
+                                <div className="border-l-2 border-emerald-200 pl-4 relative">
+                                    <div className="absolute w-3 h-3 bg-emerald-500 rounded-full -left-[7px] top-2"></div>
+                                    <h4 className="font-bold text-lg flex justify-between items-center">
+                                        <a href="/rural-development.pdf" target="_blank" rel="noopener noreferrer" className="hover:text-emerald-600 underline underline-offset-4 decoration-emerald-200 hover:decoration-emerald-500 transition-colors cursor-pointer">Rural Development Project</a>
+                                        <span className="text-xs bg-emerald-100 text-emerald-800 px-2 py-1 rounded">May '23 - July '23</span>
+                                    </h4>
+                                    <p className="text-slate-600 mt-1">Kallakarjal Village</p>
                                 </div>
                             </div>
                         </div>
@@ -151,13 +159,13 @@ export default function LightPortfolio() {
             <section id="certifications" className="py-20 bg-slate-50 border-t border-slate-200">
                 <div className="max-w-6xl mx-auto px-4">
                     <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-slate-800">Licenses & Certifications</h2>
-                    
+
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                         <a href="/Web Development Certificate.pdf" target="_blank" rel="noopener noreferrer" className="block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:border-blue-400 hover:shadow-md transition-all group">
                             <h3 className="font-bold text-lg text-slate-800 group-hover:text-blue-600 transition-colors">Web Development</h3>
                             <p className="text-slate-500 mt-2">Udemy</p>
                         </a>
-                        
+
                         <a href="/Accunture Certificate.pdf" target="_blank" rel="noopener noreferrer" className="block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:border-purple-400 hover:shadow-md transition-all group">
                             <h3 className="font-bold text-lg text-slate-800 group-hover:text-purple-600 transition-colors">Acquiring Data (Level 1 - AI Fundamentals)</h3>
                             <p className="text-slate-500 mt-2">Accenture</p>
