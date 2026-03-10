@@ -191,31 +191,33 @@ export default function Overlay() {
                 <div className="flex flex-col md:flex-row gap-6 md:gap-8 w-full max-w-7xl items-stretch md:justify-center pt-24 md:pt-32 pb-24 md:pb-20 h-full overflow-y-auto pr-2 md:pr-4 custom-scrollbar pointer-events-auto mx-auto">
                     
                     {/* Projects Column */}
-                    <div className="w-full md:w-1/2 flex flex-col bg-gradient-to-br from-[#0f172a]/95 to-[#020617]/95 border-2 border-pink-500/40 p-6 md:p-10 rounded-2xl backdrop-blur-2xl shadow-[0_0_30px_rgba(236,72,153,0.2)] hover:border-pink-400/80 transition-all duration-300">
-                        <div className="flex flex-col md:flex-row justify-between items-start mb-6 gap-4">
+                    <div className="w-full md:w-1/2 flex flex-col bg-gradient-to-br from-[#0f172a]/95 to-[#020617]/95 border-2 border-pink-500/40 p-6 md:p-10 rounded-2xl backdrop-blur-2xl shadow-[0_0_30px_rgba(236,72,153,0.2)] hover:border-pink-400/80 transition-all duration-300 md:max-h-[80vh]">
+                        <div className="flex flex-col md:flex-row justify-between items-start mb-6 gap-4 shrink-0">
                             <div className="flex items-center gap-3">
                                 <div className="w-4 h-4 rounded-full bg-pink-400 animate-pulse shadow-[0_0_10px_rgba(244,114,182,0.8)]"></div>
                                 <h4 className="text-pink-400 font-black text-2xl md:text-3xl leading-tight">Quadruped Surveillance Bot</h4>
                             </div>
                             <span className="text-sm text-pink-300 font-mono bg-pink-900/60 px-4 py-1.5 rounded-full whitespace-nowrap border border-pink-700/50">June '24 - July '24</span>
                         </div>
-                        <p className="text-base md:text-lg text-pink-200/90 mb-6 font-mono border-b border-pink-500/30 pb-4 font-semibold inline-block">Embedded C, Arduino UNO, Fusion 360, Python</p>
-                        <ul className="text-base md:text-lg text-gray-300 list-disc list-inside space-y-3 flex-1">
-                            <li>Four-legged robot for autonomous movement & stability.</li>
-                            <li>Programmed Arduino UNO microcontrollers using Embedded C.</li>
-                            <li>Implemented movement control algorithms in Python.</li>
-                            <li>Designed 3D mechanical components via Fusion 360.</li>
-                        </ul>
+                        <div className="overflow-y-auto custom-scrollbar pr-2 md:pr-4 flex-1">
+                            <p className="text-base md:text-lg text-pink-200/90 mb-6 font-mono border-b border-pink-500/30 pb-4 font-semibold inline-block">Embedded C, Arduino UNO, Fusion 360, Python</p>
+                            <ul className="text-base md:text-lg text-gray-300 list-disc list-inside space-y-3">
+                                <li>Four-legged robot for autonomous movement & stability.</li>
+                                <li>Programmed Arduino UNO microcontrollers using Embedded C.</li>
+                                <li>Implemented movement control algorithms in Python.</li>
+                                <li>Designed 3D mechanical components via Fusion 360.</li>
+                            </ul>
+                        </div>
                     </div>
 
                     {/* Certifications Column */}
-                    <div className="w-full md:w-1/2 flex flex-col bg-gradient-to-br from-[#0f172a]/95 to-[#020617]/95 border-2 border-cyan-500/40 p-6 md:p-10 rounded-2xl backdrop-blur-2xl shadow-[0_0_30px_rgba(6,182,212,0.2)] hover:border-cyan-400/80 transition-all duration-300">
-                        <div className="flex items-center gap-3 mb-6 md:mb-8">
+                    <div className="w-full md:w-1/2 flex flex-col bg-gradient-to-br from-[#0f172a]/95 to-[#020617]/95 border-2 border-cyan-500/40 p-6 md:p-10 rounded-2xl backdrop-blur-2xl shadow-[0_0_30px_rgba(6,182,212,0.2)] hover:border-cyan-400/80 transition-all duration-300 md:max-h-[80vh]">
+                        <div className="flex items-center gap-3 mb-6 md:mb-8 shrink-0">
                             <div className="w-4 h-4 rounded-full bg-cyan-400 animate-pulse shadow-[0_0_10px_rgba(34,211,238,0.8)]"></div>
                             <h3 className="text-2xl md:text-3xl font-black text-cyan-400 tracking-wider">Certifications</h3>
                         </div>
 
-                        <div className="space-y-6 flex-1">
+                        <div className="space-y-6 flex-1 overflow-y-auto custom-scrollbar pr-2 md:pr-4">
                             <a href="/Web Development Certificate.pdf" target="_blank" rel="noopener noreferrer" className="block border-l-4 border-cyan-500/50 pl-6 hover:bg-cyan-900/20 p-2 rounded transition-colors group cursor-pointer">
                                 <h4 className="font-bold text-cyan-50 text-xl group-hover:text-cyan-300 transition-colors">Web Development</h4>
                                 <p className="text-base text-cyan-200/80 mt-1">Udemy</p>
