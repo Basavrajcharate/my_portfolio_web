@@ -1,0 +1,223 @@
+﻿import { motion } from 'framer-motion';
+
+export default function Overlay() {
+    return (
+        <div className="absolute top-0 left-0 w-full pointer-events-none z-10">
+
+            {/* Hero Section Overlay */}
+            <section className="h-screen w-full flex flex-col justify-center items-center relative px-4 -mt-20 pointer-events-auto">
+                <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 1.5, ease: 'easeOut', delay: 0.2 }}
+                    className="relative flex flex-col md:flex-row items-center justify-center gap-12 max-w-7xl mx-auto w-full"
+                >
+                    {/* Subtle glowing halo behind everything */}
+                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[150%] h-[150%] bg-blue-500/10 blur-[120px] rounded-full -z-10 pointer-events-none"></div>
+
+                    {/* Profile Card */}
+                    <div className="flex flex-col items-center justify-center p-8 bg-gradient-to-br from-[#0f172a]/95 to-[#020617]/95 backdrop-blur-2xl border-2 border-blue-500/40 rounded-3xl shadow-[0_0_40px_rgba(59,130,246,0.25)] hover:border-blue-400/80 transition-all duration-500">
+                        <div className="relative w-48 h-48 mb-6 rounded-full overflow-hidden border-4 border-blue-500/50 shadow-[0_0_20px_rgba(59,130,246,0.4)]">
+                            <img
+                                src="/images/profile.jpg"
+                                alt="Basavraj Charate"
+                                className="w-full h-full object-cover"
+                            />
+                            <div className="absolute inset-0 bg-blue-500/10 mix-blend-overlay pointer-events-none"></div>
+                        </div>
+
+                        <div className="flex items-center gap-3 bg-blue-950/60 px-5 py-2.5 rounded-full border border-blue-800/60 shadow-inner">
+                            <span className="relative flex h-3 w-3">
+                                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                                <span className="relative inline-flex rounded-full h-3 w-3 bg-blue-500"></span>
+                            </span>
+                            <p className="text-blue-100 font-mono text-sm tracking-wide">Web & AIML Developer</p>
+                        </div>
+                    </div>
+
+                    {/* Primary Cinematic Text */}
+                    <div className="text-center md:text-left flex flex-col justify-center">
+                        <motion.h1
+                            className="text-6xl md:text-8xl lg:text-9xl font-black tracking-tighter mb-4 text-transparent bg-clip-text bg-gradient-to-br from-white via-blue-200 to-blue-600 drop-shadow-[0_0_25px_rgba(59,130,246,0.4)]"
+                        >
+                            BASAVRAJ<br />
+                            <span className="text-5xl md:text-7xl lg:text-8xl text-blue-400 font-light">CHARATE</span>
+                        </motion.h1>
+
+                        <motion.div
+                            initial={{ opacity: 0, x: -20 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 1, delay: 0.6 }}
+                            className="flex flex-wrap justify-center md:justify-start gap-4 mt-4"
+                        >
+                            <div className="px-6 py-2.5 rounded-full border-2 border-blue-500/40 bg-blue-950/40 backdrop-blur-md text-sm md:text-base text-blue-100 tracking-widest uppercase font-bold shadow-[0_0_15px_rgba(59,130,246,0.2)]">
+                                Web Developer
+                            </div>
+                            <div className="px-6 py-2.5 rounded-full border-2 border-purple-500/40 bg-purple-950/40 backdrop-blur-md text-sm md:text-base text-purple-100 tracking-widest uppercase font-bold shadow-[0_0_15px_rgba(168,85,247,0.2)]">
+                                AIML Specialist
+                            </div>
+                        </motion.div>
+                    </div>
+                </motion.div>
+            </section>
+            {/* Scroll indicator */}
+            <motion.div
+                className="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 2.5, duration: 1 }}
+            >
+                <span className="text-sm text-gray-400 mb-2 uppercase tracking-widest">Explore Universe</span>
+                <motion.div
+                    className="w-[1px] h-16 bg-gradient-to-b from-blue-500 to-transparent"
+                    animate={{ height: ['0px', '64px', '0px'], y: [0, 32, 64] }}
+                    transition={{ repeat: Infinity, duration: 2, ease: "linear" }}
+                />
+            </motion.div>
+
+            {/* About Section - Page 2 */}
+            <section className="h-screen w-full flex items-center justify-end px-10 md:px-20 relative pointer-events-auto" >
+                <div className="flex flex-col md:flex-row gap-8 w-full max-w-7xl mx-auto justify-end">
+
+                    {/* Education Data */}
+                    <div className="w-full md:w-[400px] bg-gradient-to-br from-[#0f172a]/95 to-[#020617]/95 border-2 border-green-500/40 p-8 rounded-2xl backdrop-blur-2xl shadow-[0_0_30px_rgba(16,185,129,0.2)] hover:border-green-400/80 transition-all duration-300 transform md:translate-x-12">
+                        <div className="flex items-center gap-3 mb-6">
+                            <div className="w-3 h-3 rounded-full bg-green-400 animate-pulse shadow-[0_0_10px_rgba(74,222,128,0.8)]"></div>
+                            <h3 className="text-2xl font-black text-green-400 tracking-wider">Education Data</h3>
+                        </div>
+                        <div className="space-y-5">
+                            <div className="border-l-2 border-green-500/50 pl-4">
+                                <h4 className="font-bold text-green-50 text-lg">B-Tech CSE in AIML (2022 - 2026)</h4>
+                                <p className="text-base text-green-200/80">D. Y. Patil International University, Akurdi</p>
+                                <p className="text-sm text-green-400 font-mono mt-1 font-bold">CGPA: 7.46/10</p>
+                            </div>
+                            <div className="border-l-2 border-green-500/50 pl-4">
+                                <h4 className="font-bold text-green-50 text-lg">HSC (12th) - 2022</h4>
+                                <p className="text-base text-green-200/80">DR D Y Patil, Pune</p>
+                                <p className="text-sm text-green-400 font-mono mt-1 font-bold">Percentage: 65.67%</p>
+                            </div>
+                            <div className="border-l-2 border-green-500/50 pl-4">
+                                <h4 className="font-bold text-green-50 text-lg">SSC (10th) - 2020</h4>
+                                <p className="text-base text-green-200/80">Shri Mallikarjun Vidhyalaya Kegaon</p>
+                                <p className="text-sm text-green-400 font-mono mt-1 font-bold">Percentage: 88.20%</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Career Trajectory */}
+                    <div className="w-full md:w-[500px] bg-gradient-to-br from-[#0f172a]/95 to-[#020617]/95 border-2 border-emerald-500/40 p-8 rounded-2xl backdrop-blur-2xl shadow-[0_0_30px_rgba(16,185,129,0.2)] hover:border-emerald-400/80 transition-all duration-300">
+                        <div className="flex items-center gap-3 mb-6">
+                            <div className="w-3 h-3 rounded-full bg-emerald-400 animate-pulse shadow-[0_0_10px_rgba(52,211,153,0.8)]"></div>
+                            <h3 className="text-2xl font-black text-emerald-400 tracking-wider">Career Trajectory</h3>
+                        </div>
+                        <div className="space-y-6">
+                            <div className="border-l-2 border-emerald-500/50 pl-4">
+                                <h4 className="font-bold text-emerald-50 text-lg flex flex-col md:flex-row md:justify-between items-start md:items-center">
+                                    <span>Web Developer & Tech Intern</span>
+                                    <span className="text-sm font-mono text-emerald-400 mt-1 md:mt-0 bg-emerald-950/50 px-2 py-0.5 rounded">May '24 - July '25</span>
+                                </h4>
+                                <p className="text-sm text-emerald-200/80 mb-2 font-medium">Sarv Enterprises (Remote)</p>
+                                <ul className="text-sm text-gray-300 list-disc list-inside space-y-1.5">
+                                    <li>Designed sustainable web solutions.</li>
+                                    <li>Developed apps using HTML, CSS, SQL, JS.</li>
+                                </ul>
+                            </div>
+                            <div className="border-l-2 border-emerald-500/50 pl-4">
+                                <h4 className="font-bold text-emerald-50 text-lg flex flex-col md:flex-row md:justify-between items-start md:items-center">
+                                    <span>Research Assistant - QML</span>
+                                    <span className="text-sm font-mono text-emerald-400 mt-1 md:mt-0 bg-emerald-950/50 px-2 py-0.5 rounded">May '25 - Aug '25</span>
+                                </h4>
+                                <p className="text-sm text-emerald-200/80 mb-2 font-medium">University of Lucknow, India</p>
+                                <ul className="text-sm text-gray-300 list-disc list-inside space-y-1.5">
+                                    <li>Developed AQI prediction model using Quantum ML.</li>
+                                    <li>Designed hybrid quantum-classical models (Qiskit).</li>
+                                </ul>
+                            </div>
+                            <div className="border-l-2 border-emerald-500/50 pl-4">
+                                <h4 className="font-bold text-emerald-50 text-lg flex flex-col md:flex-row md:justify-between items-start md:items-center">
+                                    <span>Web Developer Intern</span>
+                                    <span className="text-sm font-mono text-emerald-400 mt-1 md:mt-0 bg-emerald-950/50 px-2 py-0.5 rounded">June '24 - Sept '24</span>
+                                </h4>
+                                <p className="text-sm text-emerald-200/80 mb-2 font-medium">Agarwal Creation Fashions Pvt. Ltd</p>
+                                <ul className="text-sm text-gray-300 list-disc list-inside space-y-1.5">
+                                    <li>Designed UI/UX and managed DB operations.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Projects Section - Page 3 */}
+            <section className="h-screen w-full flex items-center justify-start px-10 md:px-20 relative pointer-events-auto">
+                <div className="w-full md:w-[450px] bg-gradient-to-br from-[#0f172a]/95 to-[#020617]/95 border-2 border-pink-500/50 p-8 rounded-2xl backdrop-blur-2xl shadow-[0_0_30px_rgba(236,72,153,0.25)] hover:border-pink-400/80 transition-all duration-300">
+                    <div className="flex flex-col md:flex-row justify-between items-start mb-4 gap-2">
+                        <h4 className="text-pink-400 font-black text-2xl leading-tight">Quadruped Surveillance Bot</h4>
+                        <span className="text-xs text-pink-300 font-mono bg-pink-900/60 px-3 py-1 rounded-full whitespace-nowrap border border-pink-700/50">June '24 - July '24</span>
+                    </div>
+                    <p className="text-sm text-pink-200/90 mb-4 font-mono border-b border-pink-500/30 pb-3 font-semibold">Embedded C, Arduino UNO, Fusion 360, Python</p>
+                    <ul className="text-base text-gray-300 list-disc list-inside space-y-2.5">
+                        <li>Four-legged robot for autonomous movement & stability.</li>
+                        <li>Programmed Arduino UNO microcontrollers using Embedded C.</li>
+                        <li>Implemented movement control algorithms in Python.</li>
+                        <li>Designed 3D mechanical components via Fusion 360.</li>
+                    </ul>
+                </div>
+            </section>
+
+            {/* Tech Stack Section - Page 4 */}
+            <section className="h-screen w-full flex items-center justify-center pointer-events-none">
+                {/* 3D handles this entirely via HTML center tags */}
+            </section>
+
+            {/* Contact Section - Page 5 */}
+            <section className="h-screen w-full flex flex-col justify-end md:justify-center items-center md:items-end px-10 md:px-20 relative pointer-events-auto pb-20 md:pb-0">
+                <div className="bg-gradient-to-br from-[#0f172a]/95 to-[#020617]/95 border-2 border-cyan-500/40 p-8 md:p-10 rounded-2xl backdrop-blur-2xl w-full max-w-[450px] shadow-[0_0_40px_rgba(6,182,212,0.25)] relative overflow-hidden mb-10">
+                    <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan-400 to-transparent opacity-50"></div>
+                    <h2 className="text-3xl md:text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500 mb-8 flex items-center gap-4">
+                        <span className="text-2xl md:text-3xl">ðŸ“¡</span> COMMS HUB
+                    </h2>
+                    <div className="space-y-5 text-cyan-50 relative z-10">
+                        <div className="flex items-center gap-4 bg-cyan-950/30 p-4 rounded-xl border border-cyan-800/40 hover:bg-cyan-900/40 transition-colors">
+                            <span className="text-2xl bg-cyan-900/50 p-2 rounded-lg">ðŸ“§</span>
+                            <div className="overflow-hidden">
+                                <p className="text-[10px] text-cyan-500 uppercase font-bold tracking-[0.2em] mb-1">Email</p>
+                                <p className="font-mono text-xs md:text-sm truncate">basavraj.charate130904@gmail.com</p>
+                            </div>
+                        </div>
+                        <div className="flex items-center gap-4 bg-cyan-950/30 p-4 rounded-xl border border-cyan-800/40 hover:bg-cyan-900/40 transition-colors">
+                            <span className="text-2xl bg-cyan-900/50 p-2 rounded-lg">ðŸ“±</span>
+                            <div>
+                                <p className="text-[10px] text-cyan-500 uppercase font-bold tracking-[0.2em] mb-1">Comms Network</p>
+                                <p className="font-mono text-sm">+91-8263852712</p>
+                            </div>
+                        </div>
+                        <div className="flex items-center gap-4 bg-cyan-950/30 p-4 rounded-xl border border-cyan-800/40 hover:bg-cyan-900/40 transition-colors">
+                            <span className="text-2xl bg-cyan-900/50 p-2 rounded-lg">ðŸŒ</span>
+                            <div>
+                                <p className="text-[10px] text-cyan-500 uppercase font-bold tracking-[0.2em] mb-1">Location Base</p>
+                                <p className="font-mono text-sm">Pune, Maharashtra, India</p>
+                            </div>
+                        </div>
+                        <div className="flex gap-4 pt-2">
+                            <a href="https://linkedin.com/in/BasavrajCharate" target="_blank" rel="noopener noreferrer" className="flex-1 bg-cyan-950/60 hover:bg-cyan-800/60 p-3 rounded-lg border border-cyan-700/50 text-center text-sm font-semibold transition-colors flex items-center justify-center gap-2">
+                                ðŸ”— LinkedIn
+                            </a>
+                            <a href="https://github.com/BasavrajCharate" target="_blank" rel="noopener noreferrer" className="flex-1 bg-cyan-950/60 hover:bg-cyan-800/60 p-3 rounded-lg border border-cyan-700/50 text-center text-sm font-semibold transition-colors flex items-center justify-center gap-2">
+                                ðŸ’» GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                {/* Footer attached to bottom of final frame */}
+                <div className="absolute bottom-0 left-0 w-full p-6 bg-black/50 backdrop-blur-md border-t border-cyan-500/20 text-center">
+                    <p className="text-cyan-200/60 font-mono text-xs tracking-widest">
+                        Â© {new Date().getFullYear()} BASAVRAJ CHARATE. ALL SYSTEMS ONLINE.
+                    </p>
+                </div>
+            </section>
+
+        </div>
+    );
+}
