@@ -56,6 +56,24 @@ export default function NavBar() {
                             <button onClick={() => scrollTo(1, 'contact')} className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">Contact</button>
                         </div>
 
+                        {/* Desktop Theme Toggle */}
+                        <button
+                            onClick={toggleTheme}
+                            className="ml-6 flex items-center justify-center p-2 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-500/30 hover:border-purple-400/50 transition-all duration-300 group"
+                            title={theme === '3d' ? "Switch to Simple Light Theme" : "Switch to 3D Space Theme"}
+                        >
+                            {theme === '3d' ? (
+                                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-yellow-300 group-hover:scale-110 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+                                </svg>
+                            ) : (
+                                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-blue-400 group-hover:scale-110 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5" />
+                                </svg>
+                            )}
+                        </button>
+                    </div>
+
                     <div className="flex md:hidden items-center">
                         <button
                             onClick={toggleTheme}
@@ -87,7 +105,6 @@ export default function NavBar() {
                         </button>
                     </div>
                 </div>
-            </div>
             </div>
 
             {isOpen && (
