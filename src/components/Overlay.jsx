@@ -10,35 +10,35 @@ export default function Overlay() {
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1.5, ease: 'easeOut', delay: 0.2 }}
-                    className="relative flex flex-col md:flex-row items-center justify-center gap-12 max-w-7xl mx-auto w-full"
+                    className="relative flex flex-col md:flex-row items-center justify-center gap-6 md:gap-12 max-w-7xl mx-auto w-full mt-4 md:mt-0"
                 >
-                    {/* Subtle glowing halo behind everything */}
-                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[150%] h-[150%] bg-blue-500/10 blur-[120px] rounded-full -z-10 pointer-events-none"></div>
+                        {/* Subtle glowing halo behind everything */}
+                        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[150%] h-[150%] bg-blue-500/10 blur-[120px] rounded-full -z-10 pointer-events-none"></div>
 
-                    {/* Profile Card */}
-                    <div className="flex flex-col items-center justify-center p-8 bg-gradient-to-br from-[#0f172a]/95 to-[#020617]/95 backdrop-blur-2xl border-2 border-blue-500/40 rounded-3xl shadow-[0_0_40px_rgba(59,130,246,0.25)] hover:border-blue-400/80 transition-all duration-500 max-w-[90vw] md:min-w-[30vw]">
-                        <div className="relative w-48 h-48 mb-6 rounded-full overflow-hidden border-4 border-blue-500/50 shadow-[0_0_20px_rgba(59,130,246,0.4)]">
-                            <img
-                                src="/images/profile.jpg"
-                                alt="Basavraj Charate"
-                                className="w-full h-full object-cover"
-                            />
-                            <div className="absolute inset-0 bg-blue-500/10 mix-blend-overlay pointer-events-none"></div>
-                        </div>
+                        {/* Profile Card */}
+                        <div className="flex flex-col items-center justify-center p-6 md:p-8 bg-gradient-to-br from-[#0f172a]/95 to-[#020617]/95 backdrop-blur-2xl border-2 border-blue-500/40 rounded-3xl shadow-[0_0_40px_rgba(59,130,246,0.25)] hover:border-blue-400/80 transition-all duration-500 max-w-[90vw] md:min-w-[30vw]">
+                            <div className="relative w-36 h-36 md:w-48 md:h-48 mb-4 md:mb-6 rounded-full overflow-hidden border-4 border-blue-500/50 shadow-[0_0_20px_rgba(59,130,246,0.4)]">
+                                <img
+                                    src="/images/profile.jpg"
+                                    alt="Basavraj Charate"
+                                    className="w-full h-full object-cover"
+                                />
+                                <div className="absolute inset-0 bg-blue-500/10 mix-blend-overlay pointer-events-none"></div>
+                            </div>
 
-                        <div className="flex items-center gap-3 bg-blue-950/60 px-5 py-2.5 rounded-full border border-blue-800/60 shadow-inner">
-                            <span className="relative flex h-3 w-3">
-                                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
-                                <span className="relative inline-flex rounded-full h-3 w-3 bg-blue-500"></span>
-                            </span>
-                            <p className="text-blue-100 font-mono text-sm tracking-wide">Web & AIML Developer</p>
+                            <div className="flex items-center gap-2 md:gap-3 bg-blue-950/60 px-4 py-2 md:px-5 md:py-2.5 rounded-full border border-blue-800/60 shadow-inner">
+                                <span className="relative flex h-3 w-3">
+                                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                                    <span className="relative inline-flex rounded-full h-3 w-3 bg-blue-500"></span>
+                                </span>
+                                <p className="text-blue-100 font-mono text-xs md:text-sm tracking-wide">Web & AIML Developer</p>
+                            </div>
                         </div>
-                    </div>
 
                     {/* Primary Cinematic Text */}
                     <div className="text-center md:text-left flex flex-col justify-center">
                         <motion.h1
-                            className="text-6xl md:text-8xl lg:text-9xl font-black tracking-tighter mb-4 text-center md:text-left"
+                            className="text-5xl md:text-8xl lg:text-9xl font-black tracking-tighter mb-4 text-center md:text-left mt-2 md:mt-0"
                         >
                             <span className="block text-transparent bg-clip-text bg-gradient-to-br from-white via-blue-200 to-blue-600 drop-shadow-[0_0_25px_rgba(59,130,246,0.4)] leading-[1.1]">
                                 BASAVRAJ
@@ -52,12 +52,12 @@ export default function Overlay() {
                             initial={{ opacity: 0, x: -20 }}
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ duration: 1, delay: 0.6 }}
-                            className="flex flex-wrap justify-center md:justify-start gap-4 mt-4"
+                            className="flex flex-row flex-wrap justify-center md:justify-start gap-2 md:gap-4 mt-2 md:mt-4"
                         >
-                            <div className="px-6 py-2.5 rounded-full border-2 border-blue-500/40 bg-blue-950/40 backdrop-blur-md text-sm md:text-base text-blue-100 tracking-widest uppercase font-bold shadow-[0_0_15px_rgba(59,130,246,0.2)]">
+                            <div className="px-4 md:px-6 py-2 md:py-2.5 rounded-full border-2 border-blue-500/40 bg-blue-950/40 backdrop-blur-md text-xs md:text-base text-blue-100 tracking-widest uppercase font-bold shadow-[0_0_15px_rgba(59,130,246,0.2)]">
                                 Web Developer
                             </div>
-                            <div className="px-6 py-2.5 rounded-full border-2 border-purple-500/40 bg-purple-950/40 backdrop-blur-md text-sm md:text-base text-purple-100 tracking-widest uppercase font-bold shadow-[0_0_15px_rgba(168,85,247,0.2)]">
+                            <div className="px-4 md:px-6 py-2 md:py-2.5 rounded-full border-2 border-purple-500/40 bg-purple-950/40 backdrop-blur-md text-xs md:text-base text-purple-100 tracking-widest uppercase font-bold shadow-[0_0_15px_rgba(168,85,247,0.2)]">
                                 AIML Specialist
                             </div>
                         </motion.div>
@@ -66,12 +66,12 @@ export default function Overlay() {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 1, delay: 0.8 }}
-                            className="flex flex-wrap justify-center md:justify-start gap-4 mt-8 pointer-events-auto"
+                            className="flex flex-col sm:flex-row justify-center md:justify-start gap-4 mt-6 md:mt-8 pointer-events-auto"
                         >
                             <a
                                 href="/resume.pdf"
                                 download="Basavraj_Charate_Resume.pdf"
-                                className="inline-flex items-center gap-2 px-8 py-3 rounded-full border-2 border-emerald-500/50 bg-emerald-900/30 hover:bg-emerald-800/50 backdrop-blur-md text-emerald-100 tracking-widest uppercase font-bold transition-all duration-300 hover:scale-105 shadow-[0_0_20px_rgba(16,185,129,0.3)] hover:shadow-[0_0_30px_rgba(16,185,129,0.6)] cursor-pointer"
+                                className="inline-flex items-center justify-center gap-2 px-6 md:px-8 py-3 rounded-full border-2 border-emerald-500/50 bg-emerald-900/30 hover:bg-emerald-800/50 backdrop-blur-md text-emerald-100 tracking-widest uppercase font-bold transition-all duration-300 hover:scale-105 shadow-[0_0_20px_rgba(16,185,129,0.3)] hover:shadow-[0_0_30px_rgba(16,185,129,0.6)] cursor-pointer"
                             >
                                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
@@ -82,7 +82,7 @@ export default function Overlay() {
                                 href="/resume.pdf"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="inline-flex items-center gap-2 px-8 py-3 rounded-full border-2 border-blue-500/50 bg-blue-900/30 hover:bg-blue-800/50 backdrop-blur-md text-blue-100 tracking-widest uppercase font-bold transition-all duration-300 hover:scale-105 shadow-[0_0_20px_rgba(59,130,246,0.3)] hover:shadow-[0_0_30px_rgba(59,130,246,0.6)] cursor-pointer"
+                                className="inline-flex items-center justify-center gap-2 px-6 md:px-8 py-3 rounded-full border-2 border-blue-500/50 bg-blue-900/30 hover:bg-blue-800/50 backdrop-blur-md text-blue-100 tracking-widest uppercase font-bold transition-all duration-300 hover:scale-105 shadow-[0_0_20px_rgba(59,130,246,0.3)] hover:shadow-[0_0_30px_rgba(59,130,246,0.6)] cursor-pointer"
                             >
                                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
